@@ -1,0 +1,115 @@
+﻿<Window x:Class="CalculadoraWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculadoraWpf"
+        mc:Ignorable="d"
+        Title="Dora la calculadora" Height="414" Width="564"
+        ResizeMode="NoResize"
+        SizeToContent="Manual">
+    <!-- Recursos compartidos para la ventana -->
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Assets/button.png" Stretch="UniformToFill"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#C71585" BlurRadius="10" ShadowDepth="5" Opacity="0.7"/>
+            </Setter.Value>
+            </Setter>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <!-- Añadido para negrita -->
+        </Style>
+    </Window.Resources>
+
+    <!-- Fondo de la ventana -->
+    <Window.Background>
+        <ImageBrush ImageSource="Assets/FondoNeutral.png" />
+    </Window.Background>
+    
+
+    <Grid>
+        
+        <!-- Definir las filas y columnas del Grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Fila para el TextBox -->
+            <RowDefinition Height="20" />
+            <!-- Espacio entre TextBox y botones -->
+            <RowDefinition Height="Auto" />
+            <!-- Fila 1 (1, 2, 3) -->
+            <RowDefinition Height="Auto" />
+            <!-- Fila 2 (4, 5, 6) -->
+            <RowDefinition Height="Auto" />
+            <!-- Fila 3 (7, 8, 9) -->
+            <RowDefinition Height="Auto" />
+            <!-- Fila 4 (AC, 0, =) -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <!-- Columna 1 -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Columna 2 -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Columna 3 -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Columna 4 (para operaciones) -->
+        </Grid.ColumnDefinitions>
+
+        <!-- TextBox para mostrar los resultados -->
+        <TextBox x:Name="Pantalla" 
+         Grid.Row="0" 
+         TextWrapping="Wrap" 
+         Height="50" 
+         FontSize="20" 
+         IsReadOnly="True" 
+         Margin="35,55,-235,25" 
+         Grid.Column="3" 
+         Grid.RowSpan="3"
+         Background="White" 
+         BorderThickness="1" 
+         BorderBrush="Gray"
+         FontWeight="Bold">
+            <TextBox.Effect>
+                <DropShadowEffect Color="#C71585" BlurRadius="10" ShadowDepth="5" Opacity="0.7"/>
+            </TextBox.Effect>
+        </TextBox>
+
+
+        <!-- Fila 1: Botones 1, 2, 3 -->
+        <Button x:Name="btn1" Content="1" Grid.Row="3" Grid.Column="3" Width="60" Height="40" Margin="35,5,-25,5" Click="btnNumeroClick" />
+        <Button x:Name="btn2" Content="2" Grid.Row="3" Grid.Column="3" Width="60" Height="40" Margin="105,5,-95,5" Click="btnNumeroClick" />
+        <Button x:Name="btn3" Content="3" Grid.Row="3" Grid.Column="3" Width="60" Height="40" Margin="175,5,-165,5" Click="btnNumeroClick" />
+        <Button x:Name="btn_suma" Content="+" Grid.Row="3" Grid.Column="3" Width="60" Height="40" Margin="245,5,-235,5" Click="btnOperacionClick" />
+
+        <!-- Fila 2: Botones 4, 5, 6 -->
+        <Button x:Name="btn4" Content="4" Grid.Row="4" Grid.Column="3" Width="60" Height="40" Margin="35,5,-25,5" Click="btnNumeroClick" />
+        <Button x:Name="btn5" Content="5" Grid.Row="4" Grid.Column="3" Width="60" Height="40" Margin="105,5,-95,5" Click="btnNumeroClick" />
+        <Button x:Name="btn6" Content="6" Grid.Row="4" Grid.Column="3" Width="60" Height="40" Margin="175,5,-165,5" Click="btnNumeroClick" />
+        <Button x:Name="btn_resta" Content="-" Grid.Row="4" Grid.Column="3" Width="60" Height="40" Margin="245,5,-235,5" Click="btnOperacionClick" />
+
+        <!-- Fila 3: Botones 7, 8, 9 -->
+        <Button x:Name="btn7" Content="7" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="35,5,-25,5" Click="btnNumeroClick" />
+        <Button x:Name="btn8" Content="8" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="105,5,-95,5" Click="btnNumeroClick" />
+        <Button x:Name="btn9" Content="9" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="175,5,-165,5" Click="btnNumeroClick" />
+        <Button x:Name="btn_mult" Content="x" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="245,5,-235,5" Click="btnOperacionClick" />
+
+        <!-- Fila 4: Botones AC, 0, = -->
+        <Button x:Name="btnAC" Content="AC" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="35,55,-25,-45" Click="btnAC_Click" />
+        <Button x:Name="btn0" Content="0" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="105,55,-95,-45" Click="btnNumeroClick" />
+        <Button x:Name="btn_Igual" Content="=" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="175,55,-165,-45" Click="btnIgualClick" />
+        <Button x:Name="btn_div" Content="/" Grid.Row="5" Grid.Column="3" Width="60" Height="40" Margin="245,55,-235,-45" Click="btnOperacionClick" />
+        
+        
+    </Grid>
+
+
+
+
+</Window>
