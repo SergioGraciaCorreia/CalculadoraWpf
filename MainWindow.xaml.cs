@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Media;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -29,7 +30,7 @@ namespace CalculadoraWpf
 				// Configurar reproducción en bucle
 				_mediaPlayer.MediaEnded += (sender, e) =>
 				{
-					_mediaPlayer.Position = TimeSpan.Zero; // Reiniciar desde el inicio
+					_mediaPlayer.Position = TimeSpan.Zero; // Reiniciar 
 					_mediaPlayer.Play();
 				};
 
@@ -49,13 +50,13 @@ namespace CalculadoraWpf
 			{
 				MediaPlayer soundPlayer = new MediaPlayer();
 				soundPlayer.Open(new Uri(rutaSonido, UriKind.Absolute));
-				soundPlayer.Volume = 0.5; // Ajusta el volumen si lo deseas
+				soundPlayer.Volume = 0.5; // Ajusta el volumen 
 				soundPlayer.Play();
 
 				// Liberar recursos después de reproducir el sonido
 				soundPlayer.MediaEnded += (sender, e) =>
 				{
-					soundPlayer.Close();
+					soundPlayer.Stop();
 				};
 			}
 			catch (Exception ex)
@@ -82,13 +83,13 @@ namespace CalculadoraWpf
 			}
 			else
 			{
-				// Mostrar mensaje de error en el TextBox y cambio de fondo.
+				// Mostrar mensaje de error en el TextBox y cambio de fondo
 				CambiarFondo("Assets/FondoError.png");
 				ReproducirSonido(@"C:\Users\KEKOO\Desktop\Curso Lógica\CalculadoraWpf\Assets\errorSound.mp3");
 				Pantalla.Text = "Número demasiado grande.";
 				Pantalla.Foreground = new SolidColorBrush(Colors.Red);
 
-				// Opcional: Restablecer el color y el contenido tras unos segundos
+				// Restablecer el color y el contenido tras unos segundos
 				Task.Delay(2000).ContinueWith(_ =>
 				{
 					Dispatcher.Invoke(() =>
@@ -108,7 +109,7 @@ namespace CalculadoraWpf
 			// Limpiar el contenido del TextBox
 			Pantalla.Text = "";
 
-			// Restablecer el color al original (por si estaba en rojo)
+			// Restablecer el color al original (por si estaba en rojo por el error)
 			Pantalla.Foreground = new SolidColorBrush(Colors.Black);
 		}
 
@@ -284,7 +285,7 @@ namespace CalculadoraWpf
 					ReproducirSonido(@"C:\Users\KEKOO\Desktop\Curso Lógica\CalculadoraWpf\Assets\errorSound.mp3");
 					Pantalla.Text = "Operador inválido.";
 					Pantalla.Foreground = new SolidColorBrush(Colors.Red);
-					Task.Delay(2000).ContinueWith(_ =>
+					Task.Delay(2500).ContinueWith(_ =>
 					{
 						Dispatcher.Invoke(() =>
 						{
@@ -301,8 +302,8 @@ namespace CalculadoraWpf
 			ReproducirSonido(@"C:\Users\KEKOO\Desktop\Curso Lógica\CalculadoraWpf\Assets\ExitoSound.mp3");
 
 
-			// Programar el retorno al fondo neutral tras 3 segundos
-			Task.Delay(3000).ContinueWith(_ =>
+			// Programar el retorno al fondo neutral tras 2 segundos
+			Task.Delay(2500).ContinueWith(_ =>
 			{
 				Dispatcher.Invoke(() =>
 				{
