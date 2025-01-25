@@ -8,6 +8,11 @@
 - ✔️ Soporte para números decimales y enteros
 - ✔️ Fácil de usar
 
+### 🎮 Video de demostración
+Mira un breve video de la **Calculadora WPF** en acción:
+
+[Ver el video](https://github.com/SergioGraciaCorreia/CalculadoraWpf/releases)  
+
 ### 🛠️ Tecnologías utilizadas
 - **C#**
 - **WPF (Windows Presentation Foundation)**
@@ -29,5 +34,6 @@ Para descargar la última versión compilada, visita la [página de releases](ht
 ---
 
 *CalculadoraWpf* es un proyecto de código abierto. Si deseas contribuir, abre un *pull request* o abre un *issue* para sugerir mejoras o reportar problemas.
+
 
 
