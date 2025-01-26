@@ -1,39 +1,38 @@
-# Calculadora WPF
+# WPF Calculator
 
-🧮 **Calculadora WPF** es una aplicación de escritorio simple y funcional construida con C# y WPF (Windows Presentation Foundation). Esta aplicación permite realizar cálculos matemáticos básicos como suma, resta, multiplicación y división.
+🧮 **WPF Calculator** is a simple and functional desktop application built with C# and WPF (Windows Presentation Foundation). This app allows you to perform basic mathematical calculations like addition, subtraction, multiplication, and division.
 
-### 🔥 Características
-- ✔️ Interfaz gráfica amigable y sencilla
-- ✔️ Funcionalidad básica de calculadora (suma, resta, multiplicación, división)
-- ✔️ Soporte para números decimales y enteros
-- ✔️ Fácil de usar
+### 🔥 Features
+- ✔️ Friendly and simple graphical interface
+- ✔️ Basic calculator functionality (addition, subtraction, multiplication, division)
+- ✔️ Support for decimal and integer numbers
+- ✔️ Easy to use
 
-### 🎮 Video de demostración
-Mira un breve video de la **Calculadora WPF** en acción:
+### 🎮 Demo Video
+Watch a short demo of the **WPF Calculator** in action:
 
-[Ver el video](https://github.com/SergioGraciaCorreia/CalculadoraWpf/releases)  
+[Watch the video](https://github.com/SergioGraciaCorreia/CalculadoraWpf/releases)  
 
-### 🛠️ Tecnologías utilizadas
+### 🛠️ Technologies Used
 - **C#**
 - **WPF (Windows Presentation Foundation)**
-- **XAML** para diseño de la interfaz
+- **XAML** for interface design
 
-### 🎮 Cómo probar
-1. Clona o descarga el repositorio.
-2. Abre el proyecto en **Visual Studio**.
-3. Compila y ejecuta la aplicación en modo **Debug** o **Release**.
-4. ¡Empieza a calcular!
+### 🎮 How to Test
+1. Clone or download the repository.
+2. Open the project in **Visual Studio**.
+3. Compile and run the application in **Debug** or **Release**.
+4. Start calculating!
 
-### 💡 Próximas mejoras
-- ➕ Añadir operaciones avanzadas (potencia, raíz cuadrada, etc.)
-- 🎨 Mejorar diseño visual y animaciones
+### 💡 Next Improvements
+- ➕ Add advanced operations (power, square roots, etc.)
+- 🎨 Improve visual design and animations
 
-### 📦 Descarga la última versión
-Para descargar la última versión compilada, visita la [página de releases](https://github.com/SergioGraciaCorreia/CalculadoraWpf/releases).
+### 📦 Download the Latest Version
+To download the latest compiled version, visit the [releases page](https://github.com/SergioGraciaCorreia/CalculadoraWpf/releases).
 
 ---
 
-*CalculadoraWpf* es un proyecto de código abierto. Si deseas contribuir, abre un *pull request* o abre un *issue* para sugerir mejoras o reportar problemas.
-
+*WPF Calculator* is an open-source project. If you wish to contribute, open a *pull request* or open an *issue* to suggest improvements or report problems.
 
 
