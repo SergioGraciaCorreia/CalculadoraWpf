@@ -1,6 +1,6 @@
-# WPF Calculator
+# Dora la Calculadora WPF
 
-🧮 **WPF Calculator** is a simple and functional desktop application built with C# and WPF (Windows Presentation Foundation). This app allows you to perform basic mathematical calculations like addition, subtraction, multiplication, and division.
+🧮 **Dora la Calculadora** is a simple and functional desktop application built with C# and WPF (Windows Presentation Foundation). This app allows you to perform basic mathematical calculations like addition, subtraction, multiplication, and division.
 
 ### 🔥 Features
 - ✔️ Friendly and simple graphical interface
