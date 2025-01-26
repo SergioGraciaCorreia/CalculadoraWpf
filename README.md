@@ -33,6 +33,6 @@ To download the latest compiled version, visit the [releases page](https://githu
 
 ---
 
-*WPF Calculator* is an open-source project. If you wish to contribute, open a *pull request* or open an *issue* to suggest improvements or report problems.
+*Dora la calculadora WPF* is an open-source project. If you wish to contribute, open a *pull request* or open an *issue* to suggest improvements or report problems.
 
 
